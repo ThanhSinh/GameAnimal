@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#board {
+    position: absolute; /* Thiết lập vị trí tuyệt đối */
+    width: 420px;
+    height: 420px;
+    perspective: 500px;
+    top: 50%; /* Đưa phần tử lên trên màn hình */
+    left: 50%; /* Đưa phần tử về giữa màn hình theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển phần tử ngược lại 50% chiều rộng và chiều cao của nó */
+}
+
+
+#board img {
+    position: relative;
+    width: 79px;
+    height: 79px;
+    border: 0.5px solid lightblue;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 20%;
+    border-width: 5px; 
+   
+}
+#drawButton {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    top: 600px; /* Vị trí từ trên xuống */
+    left: 210px; /* Vị trí từ trái sang */
+   
+  }
+
+  #drawButton2 {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    top: 600px; /* Vị trí từ trên xuống */
+    right: 210px; /* Vị trí từ trái sang */
+  }
+#pieces {
+    position: absolute;
+    width: 350px;
+    height: 80px; 
+    /*border: 2px solid #007bff; */
+    display: flex;
+    flex-wrap: wrap;
+    top: 500px; /* Vị trí từ trên xuống */
+    left: 100px; /* Vị trí từ trái sang */
+}
+#pieces2 {
+    position: absolute;
+    width: 350px;
+    height: 80px;
+    /*border: 2px solid #007bff; */
+    display: flex;
+    flex-wrap: wrap;
+    top: 500px; /* Vị trí từ trên xuống */
+    right: 100px; /* Vị trí từ trái sang */
+}
+#pieces2 img {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    border: 0.5px solid lightblue;
+    position: relative;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 20%;
+    border-width: 5px; 
+    
+}
+#pieces img {
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    border: 0.5px solid lightblue;
+    position: relative;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 20%;
+    border-width: 5px; 
+    
+    
+}
+
+
+body {
+   
+    background: #f9f9f9;
+    min-height: 100vh;
+    
+    
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+
+.navigation a {
+    text-decoration: none;
+    color: #359381;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: center;
+    font-weight: 600;
+}
+
+.navigation a:hover, .navigation a.active {
+    background: #359381;
+    color: #fff;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#text {
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.sec {
+    position: relative;
+    background: #003329;
+    padding: 100px;
+}
+.sec h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.sec p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+#id {
+    width: 75px;
+    height: 75px;
+
+}
+#id1 {
+    width: 200px;
+    height: 200px;
+
+}
+#id2 {
+    width: 400px;
+    height: 200px;
+
+}
+.headshot{
+    pointer-events: none;
+    height: 9%;
+    width: 9%;
+    border-radius: 50%;
+    margin-right: 270px;
+}
+
+@media screen and (max-width: 600px) {
+    #text {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: #359381;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        padding: 6px;
+        border-radius: 5px;
+        margin: auto;
+        font-weight: 600;
+        font-size: 5px;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .headshot {
+        pointer-events: none;
+        height: 9%;
+        width: 9%;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    .parallax {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+    }
+
+    .sec h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #board {
+        position: absolute;
+        width: 136px;
+        /* height: 836px; */
+        perspective: 550px;
+        top: 30%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+    }
+  #board img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 0.1px solid lightblue;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-bottom: -3px;
+    border-radius: 20%;
+    border-width: 1px;
+  }
+  #pieces2 img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 0.1px solid lightblue;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1px;
+    margin-bottom: -3px;
+    border-radius: 20%;
+    border-width: 1px;
+  }
+  #pieces2 {
+    position: absolute;
+    width: 86px;
+    height: 21px;
+    /* border: 2px solid #007bff; */
+    display: flex;
+    flex-wrap: wrap;
+    top: 143px;
+    right: 20px;
+    
+  }
+  #pieces {
+    position: absolute;
+    width: 86px;
+    height: 21px;
+    /* border: 2px solid #007bff; */
+    display: flex;
+    flex-wrap: wrap;
+    top: 143px;
+    left: 20px;
+}
+  #pieces img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 0.1px solid lightblue;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1px;
+    margin-bottom: -3px;
+    border-radius: 20%;
+    border-width: 1px;
+}
+   #drawButton2{
+    position: absolute;
+    padding: 6px;
+    font-size: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -430px;
+    /* top: 152px; */
+    right: 40px;
+   }
+   #drawButton {
+    position: absolute;
+    padding: 6px;
+    font-size: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -430px;
+    /* top: 152px; */
+    left: 40px;
+}
+}
